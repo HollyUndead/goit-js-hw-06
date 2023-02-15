@@ -11,7 +11,8 @@ const ingredients = [
 const category = document.querySelector('#ingredients')
 let list = '';
 ingredients.forEach((el) => {
-    list += `<li class="item"> ${el}</li>`
+    const li = document.createElement('li')
+    li.innerText = el;
+    li.id = 'ingredients'
+    category.appendChild(li)
 })
-
-category.insertAdjacentHTML('afterend', list);
